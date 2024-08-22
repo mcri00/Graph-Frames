@@ -83,7 +83,9 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
             combinedGraph.addVertex(te.element);
             // Assuming edges are stored elsewhere, add edge logic here
         });
-        return new ContentGeneralGraph<>(time).add(combinedGraph);
+        ContentGeneralGraph<T> res = new ContentGeneralGraph<>(time);
+        res.add(combinedGraph);
+        return res;
     }
 
     @Override
@@ -93,7 +95,9 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
             windowGraph.addVertex(te.element);
             // Assuming edges are stored elsewhere, add edge logic here
         });
-        return Collections.singletonList(new ContentGeneralGraph<>(time).add(windowGraph));
+        ContentGeneralGraph<T> res = new ContentGeneralGraph<>(time);
+        res.add(windowGraph);
+        return Collections.singletonList(res);
     }
 
     public void windowing(Graph<T, DefaultEdge> e, long ts) {

@@ -5,36 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51ff5325-5016-4d11-ae37-176acd8cf2e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/BetweennessCentralityAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/ContentGeneralGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/ContentGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/CustomGraphStreamOp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/GraphDiameterAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/GraphProcessingAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/IterableGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/ShortestPathAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/TimestampedElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpParameterizedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yasper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/content/AccumulatorContent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/content/FilterContent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/content/FirstContent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/content/LastContent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/factories/AccumulatorContentFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/factories/FilterContentFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/factories/FirstContentFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/contentimpl/factories/LastContentFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/operatorsimpl/r2r/DAG/BinaryDAGNodeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/operatorsimpl/r2r/DAG/DAGImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/operatorsimpl/r2r/DAG/DAGRootNodeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/operatorsimpl/r2r/DAG/UnaryDAGNodeImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/operatorsimpl/s2r/CQELSStreamToRelationOpImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/shared/operatorsimpl/s2r/CSPARQLStreamToRelationOpImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,25 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Cristina/IdeaProjects/rsp4j-quickstart/yasper/src/main/java/rsp4j/querying/operators/windowing",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/Cristina/IdeaProjects/rsp4j-quickstart/yasper/src/main/java/rsp4j/querying/operators/windowing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/yasper/src/main/java/rsp4j/querying/operators/windowing" />
@@ -96,8 +68,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-azul-17.0.10-4caba194b151-d69ea429" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
       </set>
     </attachedChunks>
   </component>
@@ -117,6 +88,7 @@
       <workItem from="1721827353823" duration="601000" />
       <workItem from="1721835202629" duration="599000" />
       <workItem from="1721837711009" duration="17671000" />
+      <workItem from="1724333861279" duration="1536000" />
     </task>
     <servers />
   </component>
