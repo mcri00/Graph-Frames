@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ff5325-5016-4d11-ae37-176acd8cf2e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="51ff5325-5016-4d11-ae37-176acd8cf2e2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +85,7 @@
       <workItem from="1721827353823" duration="601000" />
       <workItem from="1721835202629" duration="599000" />
       <workItem from="1721837711009" duration="17671000" />
-      <workItem from="1724333861279" duration="1536000" />
+      <workItem from="1724333861279" duration="1823000" />
     </task>
     <servers />
   </component>

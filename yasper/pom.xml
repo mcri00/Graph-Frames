@@ -81,16 +81,6 @@
             <scope>compile</scope>
         </dependency>
 
-        <!--dependency>
-                <groupId>com.github.streamreasoning.rsp4j</groupId>
-                <artifactId>api</artifactId>
-                <version>1.1.8</version>
-            </dependency>-->
-        <!--dependency>
-                <groupId>com.github.streamreasoning.rsp4j</groupId>
-                <artifactId>operatorapi</artifactId>
-                <version>1.1.8</version>
-        </dependency>-->
 
 
     </dependencies>
