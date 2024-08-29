@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c79f8f0-358b-4c91-8ff0-fd308007ca1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/yasper/src/main/java/ContentFactoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/test/java/NYCTaxiGraphLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yasper/src/test/java/TestOnDataset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/CustomGraphStreamOp.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/CustomGraphStreamOp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpParameterizedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/ContentFactoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/IterableGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/IterableGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724923103261</updated>
-      <workItem from="1724923104472" duration="9436000" />
+      <workItem from="1724923104472" duration="10914000" />
     </task>
     <servers />
   </component>

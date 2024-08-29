@@ -13,4 +13,7 @@ public class IterableGraph<T> implements Iterable<T> {
     public Iterator<T> iterator() {
         return graph.vertexSet().iterator();
     }
+    public Graph<T, DefaultEdge> getGraph() {
+        return this.graph;
+    }
 }

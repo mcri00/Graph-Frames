@@ -2,6 +2,7 @@ import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -86,9 +87,9 @@ public class CustomGraphStreamOpTest {
         assertTrue(combinedGraph.containsEdge("B", "C"));
     }
 
-    static class GraphAlgorithmProvider implements ArgumentsProvider {
+    public static class GraphAlgorithmProvider implements ArgumentsProvider {
         @Override
-        public Stream<? extends Arguments> provideArguments(ParameterContext context) {
+        public Stream<? extends Arguments> provideArguments(ExtensionContext context) throws Exception {
             return Stream.of(
                     Arguments.of(new BetweennessCentralityAlgorithm<>(0.5)),
                     Arguments.of(new GraphDiameterAlgorithm<>(3.0)),
