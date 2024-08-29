@@ -80,8 +80,12 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
     public Content<Graph<T, DefaultEdge>, Graph<T, DefaultEdge>, IterableGraph<T>> content(long t_e) {
         Graph<T, DefaultEdge> combinedGraph = new SimpleGraph<>(DefaultEdge.class);
         buffer.stream().filter(te -> te.timestamp >= t_e - windowSize).forEach(te -> {
-            combinedGraph.addVertex(te.element);
-            // Assuming edges are stored elsewhere, add edge logic here
+            for (T vertex : te.element.vertexSet()) {
+                combinedGraph.addVertex(vertex);
+            }
+            for (DefaultEdge edge : te.element.edgeSet()) {
+                combinedGraph.addEdge(te.element.getEdgeSource(edge), te.element.getEdgeTarget(edge));
+            }
         });
         ContentGeneralGraph<T> res = new ContentGeneralGraph<>(time);
         res.add(combinedGraph);
@@ -92,8 +96,12 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
     public List<Content<Graph<T, DefaultEdge>, Graph<T, DefaultEdge>, IterableGraph<T>>> getContents(long t_e) {
         Graph<T, DefaultEdge> windowGraph = new SimpleGraph<>(DefaultEdge.class);
         buffer.stream().filter(te -> te.timestamp >= t_e - windowSize).forEach(te -> {
-            windowGraph.addVertex(te.element);
-            // Assuming edges are stored elsewhere, add edge logic here
+            for (T vertex : te.element.vertexSet()) {
+                windowGraph.addVertex(vertex);
+            }
+            for (DefaultEdge edge : te.element.edgeSet()) {
+                windowGraph.addEdge(te.element.getEdgeSource(edge), te.element.getEdgeTarget(edge));
+            }
         });
         ContentGeneralGraph<T> res = new ContentGeneralGraph<>(time);
         res.add(windowGraph);
@@ -110,8 +118,16 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
         }
 
         buffer.add(new TimestampedElement<>(e, ts));
-        graph.addVertex(e);
-        // Add edges if available
+
+        // Aggiungi tutti i vertici e gli archi dal grafo 'e' al grafo 'graph'
+        for (T vertex : e.vertexSet()) {
+            graph.addVertex(vertex);
+        }
+        for (DefaultEdge edge : e.edgeSet()) {
+            T source = e.getEdgeSource(edge);
+            T target = e.getEdgeTarget(edge);
+            graph.addEdge(source, target);
+        }
 
         // Process the graph with the provided algorithm
         algorithm.process(graph);
@@ -120,7 +136,7 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
         if (algorithm.shouldCloseWindow(graph)) {
             // Create a new window
             Window active = scope(t_e);
-            if (report.report(active, new ContentGeneralGraph<>(time).add(graph), t_e, System.currentTimeMillis())) {
+            if (report.report(active, addAndReturn(new ContentGeneralGraph<>(time), graph), t_e, System.currentTimeMillis())) {
                 ticker.tick(t_e, active);
             }
 
@@ -131,6 +147,7 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
 
         cleanUpWindows(t_e);
     }
+
 
     @Override
     public void evict() {
@@ -177,5 +194,10 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
             this.element = element;
             this.timestamp = timestamp;
         }
+    }
+
+    private ContentGeneralGraph<T> addAndReturn(ContentGeneralGraph<T> contentGraph, Graph<T, DefaultEdge> graph) {
+        contentGraph.add(graph);
+        return contentGraph;
     }
 }
