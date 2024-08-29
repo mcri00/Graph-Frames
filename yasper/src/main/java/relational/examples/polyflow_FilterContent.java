@@ -1,4 +1,4 @@
-package relational.examples;
+/*package relational.examples;
 
 import shared.operatorsimpl.s2r.CSPARQLStreamToRelationOpImpl;
 import org.javatuples.Tuple;
@@ -190,5 +190,5 @@ public class polyflow_FilterContent {
 
 
 
-
+*/
 

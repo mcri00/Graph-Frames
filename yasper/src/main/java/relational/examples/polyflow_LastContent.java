@@ -1,4 +1,4 @@
-package relational.examples;
+/*package relational.examples;
 
 import org.javatuples.Tuple;
 import org.streamreasoning.rsp4j.api.coordinators.ContinuousProgram;
@@ -180,3 +180,4 @@ public class polyflow_LastContent {
         //generator.stopStreaming();
     }
 }
+*/

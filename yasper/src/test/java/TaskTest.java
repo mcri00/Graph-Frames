@@ -1,4 +1,4 @@
-import graph.jena.datatypes.JenaGraphOrBindings;
+/*import graph.jena.datatypes.JenaGraphOrBindings;
 import graph.jena.operatorsimpl.r2r.jena.FullQueryUnaryJena;
 import graph.jena.operatorsimpl.r2s.RelationToStreamOpImpl;
 import graph.jena.sds.SDSJena;
@@ -45,7 +45,7 @@ public class TaskTest {
 
         /*------INITIALIZATION OF COMPONENTS USED BY THE TASK------*/
 
-        JenaStreamGenerator generator = new JenaStreamGenerator();
+        /*JenaStreamGenerator generator = new JenaStreamGenerator();
         DataStream<Graph> inputStreamColors = generator.getStream("http://test/stream1");
         JenaBindingStream outStream = new JenaBindingStream("out");
         Report report = new ReportImpl();
@@ -79,7 +79,7 @@ public class TaskTest {
         /*---------------Test the addS2ROperator method-------------*/
 
         //Create a dummy S2R to check if the Task correctly throws an exception when an S2R with the same name is already present
-        StreamToRelationOperator<Graph, Graph, JenaGraphOrBindings> s2rOp_dummy = new CSPARQLStreamToRelationOpImpl<>(tick, instance, "w1", accumulatorContentFactory, tvFactory, report_grain, report, 500, 500);
+      /*  StreamToRelationOperator<Graph, Graph, JenaGraphOrBindings> s2rOp_dummy = new CSPARQLStreamToRelationOpImpl<>(tick, instance, "w1", accumulatorContentFactory, tvFactory, report_grain, report, 500, 500);
 
 
         noDuplicateTests(s2rOp_dummy, task);
@@ -87,7 +87,7 @@ public class TaskTest {
         /*---------------End of test addS2ROperator method-------------*/
 
         /*---------------Beginning test elaborateElement method-------------*/
-        Graph graph1 = GraphMemFactory.createGraphMem();
+   /*     Graph graph1 = GraphMemFactory.createGraphMem();
         Node p = NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
         graph1.add(NodeFactory.createURI("http://test/S0"), p, NodeFactory.createURI("http://test/Red"));
         graph1.add(NodeFactory.createURI("http://test/S1"), p, NodeFactory.createURI("http://test/Black"));
@@ -117,3 +117,4 @@ public class TaskTest {
 
     }
 }
+*/

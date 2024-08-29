@@ -2,6 +2,7 @@ import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.streamreasoning.rsp4j.api.RDFUtils;
 import org.streamreasoning.rsp4j.api.enums.ReportGrain;
 import org.streamreasoning.rsp4j.api.enums.Tick;
 import org.streamreasoning.rsp4j.api.secret.report.ReportImpl;
@@ -23,7 +24,7 @@ public class TestOnDataset {
         // Inizializza l'operatore CustomGraphStreamOp con un algoritmo di esempio
         GraphProcessingAlgorithm<String> algorithm = new BetweennessCentralityAlgorithm<>(0.5);
         customGraphStreamOp = new CustomGraphStreamOp<>(
-                IRI.create("http://example.org/customOp"),
+                RDFUtils.createIRI("http://example.org/customOp"),
                 60000, // Window size in milliseconds
                 algorithm,
                 new TimeImpl(0L),

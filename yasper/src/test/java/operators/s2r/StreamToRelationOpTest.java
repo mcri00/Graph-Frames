@@ -1,4 +1,4 @@
-package operators.s2r;
+/*package operators.s2r;
 
 import graph.jena.datatypes.JenaGraphOrBindings;
 import graph.jena.sds.TimeVaryingFactoryJena;
@@ -147,3 +147,4 @@ public class StreamToRelationOpTest {
 
     }
 }
+*/

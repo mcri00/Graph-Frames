@@ -8,13 +8,17 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
+import org.streamreasoning.rsp4j.api.RDFUtils;
 import org.streamreasoning.rsp4j.api.operators.s2r.execution.instance.Window;
 import org.streamreasoning.rsp4j.api.secret.content.Content;
 import org.streamreasoning.rsp4j.api.secret.content.ContentFactory;
 import org.streamreasoning.rsp4j.api.secret.report.Report;
+import org.streamreasoning.rsp4j.api.secret.report.strategies.ReportingStrategy;
+import org.streamreasoning.rsp4j.api.secret.time.ET;
 import org.streamreasoning.rsp4j.api.secret.time.Time;
 import org.streamreasoning.rsp4j.api.enums.ReportGrain;
 import org.streamreasoning.rsp4j.api.enums.Tick;
+import org.streamreasoning.rsp4j.api.secret.time.TimeInstant;
 
 import java.util.stream.Stream;
 
@@ -24,11 +28,10 @@ public class CustomGraphStreamOpTest {
 
     private CustomGraphStreamOp<String> customGraphStreamOp;
 
-    @BeforeEach
     public void setUp(GraphProcessingAlgorithm<String> algorithm) {
         // Inizializza CustomGraphStreamOp con un algoritmo specifico
         customGraphStreamOp = new CustomGraphStreamOp<>(
-                IRI.create("http://example.org/customOp"),
+                RDFUtils.createIRI("http://example.org/customOp"),
                 60000, // Window size in milliseconds
                 algorithm,
                 new TimeImpl(),
@@ -103,6 +106,11 @@ public class CustomGraphStreamOpTest {
         private long appTime;
 
         @Override
+        public long getScope() {
+            return 0;
+        }
+
+        @Override
         public long getAppTime() {
             return appTime;
         }
@@ -116,6 +124,26 @@ public class CustomGraphStreamOpTest {
         public long getSystemTime() {
             return System.currentTimeMillis();
         }
+
+        @Override
+        public ET getEvaluationTimeInstants() {
+            return null;
+        }
+
+        @Override
+        public void addEvaluationTimeInstants(TimeInstant i) {
+
+        }
+
+        @Override
+        public TimeInstant getEvaluationTime() {
+            return null;
+        }
+
+        @Override
+        public boolean hasEvaluationInstant() {
+            return false;
+        }
     }
 
     static class ReportImpl implements Report {
@@ -123,10 +151,25 @@ public class CustomGraphStreamOpTest {
         public boolean report(Window window, Content content, long t_e, long sysTime) {
             return true;
         }
+
+        @Override
+        public void add(ReportingStrategy r) {
+
+        }
+
+        @Override
+        public ReportingStrategy[] strategies() {
+            return new ReportingStrategy[0];
+        }
     }
 
     // Implementazione di una ContentFactory per il test
     static class ContentGeneralGraphFactoryImpl implements ContentFactory<Graph<String, DefaultEdge>, Graph<String, DefaultEdge>, IterableGraph<String>> {
+        @Override
+        public Content<Graph<String, DefaultEdge>, Graph<String, DefaultEdge>, IterableGraph<String>> createEmpty() {
+           return new ContentGeneralGraph<>(new TimeImpl());
+        }
+
         @Override
         public ContentGeneralGraph<String> create() {
             return new ContentGeneralGraph<>(new TimeImpl());

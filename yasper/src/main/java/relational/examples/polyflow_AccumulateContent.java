@@ -1,4 +1,4 @@
-package relational.examples;
+/*package relational.examples;
 
 import relational.operatorsimpl.r2r.R2RjtablesawSelection;
 import shared.operatorsimpl.s2r.CSPARQLStreamToRelationOpImpl;
@@ -185,3 +185,4 @@ public class polyflow_AccumulateContent {
 
 
 
+*/

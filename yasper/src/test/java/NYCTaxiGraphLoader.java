@@ -1,6 +1,7 @@
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
+import org.streamreasoning.rsp4j.api.RDFUtils;
 import org.streamreasoning.rsp4j.api.enums.ReportGrain;
 import org.streamreasoning.rsp4j.api.enums.Tick;
 import org.streamreasoning.rsp4j.api.secret.report.ReportImpl;
@@ -46,7 +47,7 @@ public class NYCTaxiGraphLoader {
         // Passa il grafo al tuo CustomGraphStreamOp per il processamento
         GraphProcessingAlgorithm<String> algorithm = new BetweennessCentralityAlgorithm<>(0.5);
         CustomGraphStreamOp<String> customGraphStreamOp = new CustomGraphStreamOp<>(
-                IRI.create("http://example.org/customOp"),
+                RDFUtils.createIRI("http://example.org/customOp"),
                 60000, // Window size in milliseconds
                 algorithm,
                 new TimeImpl(0L),

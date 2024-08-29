@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c79f8f0-358b-4c91-8ff0-fd308007ca1d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/ContentFactoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/IterableGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/IterableGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/graph/jena/examples/example_quickstart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_AccumulateContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_AccumulateContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_FilterContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_FilterContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_FirstContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_FirstContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_LastContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_LastContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_LazyEvaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/main/java/relational/examples/polyflow_LazyEvaluation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/CustomGraphStreamOpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/test/java/NYCTaxiGraphLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/NYCTaxiGraphLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/test/java/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/TaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/test/java/TestOnDataset.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/TestOnDataset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yasper/src/test/java/operators/s2r/StreamToRelationOpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yasper/src/test/java/operators/s2r/StreamToRelationOpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,48 +43,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
   <component name="ProjectId" id="2lKK0PTwCn71BziTvIA1xHYsb7T" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Graph-Frames" />
+    <configuration name="CustomGraphStreamOpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yasper" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CustomGraphStreamOpTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Graph-Frames" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CustomGraphStreamOpTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -92,10 +91,22 @@
       <option name="presentableId" value="Default" />
       <updated>1724923103261</updated>
       <workItem from="1724923104472" duration="10914000" />
+      <workItem from="1724951833969" duration="797000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
