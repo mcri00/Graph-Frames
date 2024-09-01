@@ -95,8 +95,8 @@ public class CustomGraphStreamOpTest {
         public Stream<? extends Arguments> provideArguments(ExtensionContext context) throws Exception {
             return Stream.of(
                     Arguments.of(new BetweennessCentralityAlgorithm<>(0.5)),
-                    Arguments.of(new GraphDiameterAlgorithm<>(3.0)),
-                    Arguments.of(new ShortestPathAlgorithm<>("A", "C", 2.0))
+                    Arguments.of(new GraphDiameterAlgorithm<>(1.0)),
+                    Arguments.of(new ShortestPathAlgorithm<>("A", "C", 1.5))
             );
         }
     }

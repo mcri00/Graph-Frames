@@ -112,9 +112,17 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
         log.debug("Received element (" + e + "," + ts + ")");
         long t_e = ts;
 
+        // Log dello stato di appTime prima dell'elaborazione
+        log.debug("Before processing: AppTime = " + time.getAppTime());
+
         if (time.getAppTime() > t_e) {
             log.error("OUT OF ORDER NOT HANDLED");
             throw new OutOfOrderElementException("(" + e + "," + ts + ")");
+        }
+
+        // Aggiorna manualmente appTime solo se t_e è maggiore di appTime attuale e non fuori ordine
+        if (t_e >= currentTime) {
+            time.setAppTime(t_e);
         }
 
         buffer.add(new TimestampedElement<>(e, ts));
@@ -146,6 +154,8 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
         }
 
         cleanUpWindows(t_e);
+        // Log dello stato di appTime dopo l'elaborazione
+        log.debug("After processing: AppTime = " + time.getAppTime());
     }
 
 
@@ -175,7 +185,12 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
 
     @Override
     public TimeVarying<IterableGraph<T>> get() {
-        return new TimeVaryingObject<>(this, iri);
+        return new TimeVaryingObject<>(this, iri) {
+            @Override
+            public IterableGraph<T> get() {
+                return new IterableGraph<>(new SimpleGraph<>(DefaultEdge.class));
+            }
+        };
     }
 
     @Override
@@ -199,5 +214,9 @@ public class CustomGraphStreamOp<T> implements StreamToRelationOperator<Graph<T,
     private ContentGeneralGraph<T> addAndReturn(ContentGeneralGraph<T> contentGraph, Graph<T, DefaultEdge> graph) {
         contentGraph.add(graph);
         return contentGraph;
+    }
+
+    public Time getTime() {
+        return time;
     }
 }
